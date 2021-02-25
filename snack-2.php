@@ -15,6 +15,8 @@ if(empty($name) || empty($mail) || empty($age) ){
   $messaggio = "Accesso negato";
 } elseif ((strlen($name) > 3) && (strpos($mail, '@')) && (strpos($mail, '.')) && (is_numeric($age))){
     $messaggio = "Accesso riuscito";
+} else{
+    $messaggio = "Reinserisci i dati tenendo conto che: <br> Nome: sia superiore a 3 caratteri; <br> Mail : deve contenere '@' e '.'; <br> Età: deve essere espressa utilizzando le cifre numeriche";
 }
 ?>
 
